@@ -137,7 +137,29 @@ const data = [
     }
     ]
 
-    jsonExcel.innerHTML = JSON.stringify(data , undefined , 4)
+// jsonExcel.innerHTML = JSON.stringify(data , undefined , 4)
+
+// Display Data
+
+function displayData() {
+   
+    let temp = ''
+    for(let i  = 0 ; i < data.length ; i++){
+
+        temp += `              
+        <tr>
+        <td>${i}</td>
+        <td>${data[i].userId}</td>
+        <td>${data[i].title}</td>
+        <td>${data[i].body.slice(0,50)}</td>
+      </tr>`
+      jsonExcel.innerHTML = temp
+      
+    }
+  }
+
+  displayData()
+
 const excelType = 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet;charset=UTF-8';
 const excelExtension = '.xlsx';
 

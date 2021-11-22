@@ -11,7 +11,21 @@
     
 
 <div class="container my-5">
-    <pre id="jsonExcel"></pre>
+    <pre id="">
+        <table class="table table-striped text-center">
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">UserId</th>
+                <th scope="col">Title</th>
+                <th scope="col">body</th>
+              </tr>
+            </thead>
+            <tbody id="jsonExcel">
+
+            </tbody>
+          </table>
+    </pre>
     <button class="btn btn-outline-danger"  id="btnSaveExcel" onclick="downloadExcel()" >Save To Excel</button>
 </div>
 
